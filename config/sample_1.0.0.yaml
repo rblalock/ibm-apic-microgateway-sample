@@ -1,0 +1,21 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: skating
+  x-ibm-name: skating
+host: $(catalog.host)
+basePath: /api
+paths:
+  /skate:
+    get:
+      responses:
+        '200':
+          description: 200 OK
+x-ibm-configuration:
+  assembly:
+    execute:
+      - invoke:
+          target-url: 'http://skateipsum.com/get/3/1/JSON'
+      - logger:
+         level: info
+         version: 1.0.0

@@ -1,0 +1,14 @@
+{
+  "name": "ugw-standalone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	  "start": "DATASTORE_PORT=1337 PORT=8080 node ."
+  },
+  "author": "Rick Blalock <rick.blalock@us.ibm.com> (http://www-03.ibm.com/software/products/en/api-connect)",
+  "license": "MIT",
+  "dependencies": {
+    "microgateway": "^1.6.2"
+  }
+}

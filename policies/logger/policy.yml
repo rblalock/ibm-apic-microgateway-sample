@@ -1,0 +1,27 @@
+policy: 1.0.0
+
+info:
+  title: Logger
+  name: logger
+  version: 1.0.0
+  description: Log the request.url to the console
+  contact:
+    name: IBM API Connect
+    url: https://www.ibm.com/apiconnect
+    email: someone@ibm.com
+
+gateways:
+ - micro-gateway
+
+properties:
+  type: object
+  properties:
+    level:
+      label: Log Level
+      description: Log Level
+      type: string
+      enum:
+        - debug
+        - warn
+        - error
+      default: error

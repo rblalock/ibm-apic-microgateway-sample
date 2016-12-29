@@ -1,0 +1,18 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Some Other Thing
+  x-ibm-name: someothertest
+host: $(catalog.host)
+basePath: /othertest
+paths:
+  /skate:
+    get:
+      responses:
+        '200':
+          description: 200 OK
+x-ibm-configuration:
+  assembly:
+    execute:
+      - invoke:
+          target-url: 'http://skateipsum.com/get/3/1/JSON'
